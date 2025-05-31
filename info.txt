@@ -1,0 +1,17 @@
+=====================================================
+
+			payam
+
+=====================================================
+
+
+Dist-IP >>> ?
+
+Enter : 
+	1) send
+		>>> packet = IP(dst={Dist-IP}) / ICMP() / "Hello"
+		>>> send(packet)
+	
+	2) receive
+		>>> print(str(scapy.all.sniff(count=1, filter="icmp and src host {Dist-IP}")[0].load)[2:-1])
+		'Hello'
