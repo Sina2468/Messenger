@@ -1,2 +1,2 @@
 # Messenger
-Sending and receiving messages from the LAN
+Sending and receiving messages into your LAN
