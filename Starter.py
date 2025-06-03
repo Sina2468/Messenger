@@ -1,7 +1,6 @@
 from Setting import Menu
 from Local_IP_finder import Get_local_IP
-
-# from os import system
+from os import system
 
 
 def Starter():
@@ -11,5 +10,4 @@ def Starter():
 
     Get_local_IP()
 
-    # for name in Setting.Names:
-    #     system(name)
+    system("start S_R.bat")

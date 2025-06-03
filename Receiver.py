@@ -9,14 +9,7 @@ def Receiver():
         print()
         print("------------------------------")
         print()
-        print(
-            str(
-                sniff(
-                    count=1,
-                    filter=f"icmp and src host {Dist_IP} and dst host {Local_IP}",
-                )[0].load
-            )[2:-1]
-        )
+        print(str(sniff(count=1,filter=f"icmp and src host {Dist_IP} and dst host {Local_IP}",)[0].load)[2:-1])
 
 
 if __name__ == "__main__":
