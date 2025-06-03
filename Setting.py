@@ -4,8 +4,19 @@ Menu: str = """=====================================================
 
 ====================================================="""
 
-Dist_IP: str = "127.0.0.1"
+Names: list = ["Sender.py", "Receiver.py"]
 
-Names: list = ["Sender.py", "receive"]
+Text: str = ""
 
-Text = "Hello"
+try:
+    with open("DistIP.txt", "r") as file:
+        Dist_IP: str = str(file.read())
+except:
+    pass
+
+try:
+    with open("localIP.txt", "r") as file:
+        Local_IP: str = str(file.read())
+except:
+    pass
+

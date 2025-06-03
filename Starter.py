@@ -1,10 +1,15 @@
-import Setting
-from os import system
+from Setting import Menu
+from Local_IP_finder import Get_local_IP
+
+# from os import system
 
 
 def Starter():
-    print(Setting.Menu)
-    Setting.Dist_IP = str(input("\nDist-IP >>> "))
+    print(Menu)
+    with open("DistIP.txt", "w") as File:
+        File.write(str(input("\nDist-IP >>> ")))
 
-    for name in Setting.Names:
-        system(name)
+    Get_local_IP()
+
+    # for name in Setting.Names:
+    #     system(name)
